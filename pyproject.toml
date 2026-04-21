@@ -1,0 +1,47 @@
+[project]
+name = "sarashina2.2-tts"
+version = "0.1.0"
+description = "sarashina2.2-tts"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Lianbo Liu", email = "lianbo.liu@sbintuitions.co.jp"}
+]
+dependencies = [
+    # Core dependencies
+    "torch<=2.9",
+    "torchaudio<=2.9",
+    "transformers",
+    "huggingface_hub",
+    "numpy<=2.3.5",
+    "tqdm",
+    # Audio processing
+    "soundfile",
+    "librosa>=0.11.0",
+    "s3tokenizer",
+    # Flow matching
+    "diffusers",
+    # Audio watermarking
+    "silentcipher @ git+https://github.com/SesameAILabs/silentcipher.git@d46d7d0893a583d8968ab3a6626e2289faec9152",
+    # Serving
+    "gradio",
+    "fastapi",
+]
+
+[project.optional-dependencies]
+# vLLM version for faster inference
+vllm = [
+    "vllm==0.13",
+]
+
+[project.urls]
+Homepage = "https://github.com/sbintuitions/sarashina2.2-tts"
+Repository = "https://github.com/sbintuitions/sarashina2.2-tts"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]

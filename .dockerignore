@@ -1,0 +1,12 @@
+.git
+.vscode
+.DS_Store
+__pycache__
+*.pyc
+*.egg-info
+venv/
+build/
+dist/
+**/gradio_outputs/
+.gradio
+pretrained_models/

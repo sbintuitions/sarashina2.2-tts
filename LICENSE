@@ -1,0 +1,122 @@
+Sarashina Model NonCommercial License Agreement
+Released Date by SB Intuitions Corp.: April 24, 2026
+
+This Sarashina Model NonCommercial License Agreement (this “Agreement”) is a legal agreement between Licensee (as defined in Article 1) and SB Intuitions Corp.  (“SB Intuitions”), and governs Licensee's use of the Models (as defined in Article 1) that SB Intuitions provides to Licensee under this Agreement.
+
+The Models released under this Agreement are intended to be used under this Agreement and contribute to the development of AI technologies. 
+
+By using, reproducing, modifying, distributing, performing or displaying any portion or element of the Model or Derivative Models, or otherwise accepting the terms of this Agreement, you agree to be bound by this Agreement. If you do not agree to this Agreement, you may not download the Model or Derivative Models.
+
+1.	Definition
+i.	“Model” means the deliverables including machine learning models, software, learnt weights, algorithms, parameters and configuration files provided by SB Intuitions and shared under this Agreement.
+ii.	"Output Data" means the text, images, sounds, or other information output of the Model that results from operating or otherwise using the Model.
+iii.	“Derivative Model” means all modifications to the Model, or deliverables created based on the Model, and any other machine learning models which have been trained, tuned, or improved by using Output Data. For clarification, Output Data is not the Derivative Model.  
+iv.	"Licensee" means the person or entity exercising the rights granted by this Agreement.
+v.	“Affiliate” means any entity that now or hereafter controls, is controlled by, or is under common control with, SB Intuitions Corp. For the purposes of this definition, “control” shall mean the direct or indirect ownership over or the legal right or power to, directly or indirectly, direct or alter the direction of the management and affairs of the entity.
+vi.	“License” means the rights granted by Licensee under Article 2 （Right）ii of this Agreement.
+vii.	“Intellectual Property Rights” means copyrights, patents, utility model rights, design rights, trademarks and other intellectual property rights including the right to acquire such rights or to apply for the registration, etc. of such rights.
+
+2.	Right
+i.	Condition
+Any use, reproduction, modification, distribution, performance or display of the Model or Derivative Models shall be subject to the following conditions:
+(a)	Upon renewal of the License, Licensee shall agree to comply with the renewed License or to cease using, copying, modifying, distributing, performing or displaying the Model or Derivative Models.
+(b)	Licensee shall comply with the redistribution regulations set out in Article 3.
+(c)	Licensee shall comply with the prohibition regulations set out in Article 6.
+(d)	Licensee shall not use, copy, modify, distribute, perform or display the Model for commercial purpose (except for research and study purpose).
+ii.	Grant of License
+Subject to Licensee's compliance with this Agreement, SB Intuitions grants Licensee a non-exclusive and non-transferable license to use, copy, distribute, modify, perform or display the Model. This license also includes the creation of Derivative Models from the Model.
+iii.	Reservation of Rights
+(a)	SB Intuitions reserves all rights, interests and remedies in and to the Model or Derivatives Models by SB Intuitions, and no other rights are granted to Licensee except as expressly set forth in this Agreement.
+(b)	Licensee reserves the copyright to all Derivative Models created by Licensee.
+(c)	SB Intuitions does not claim any rights in the Output Data generated from the Model or Derivative Models. To the extent permitted by law, SB Intuitions acknowledges that the Output Data belongs to Licensee. Licensee is responsible for the use of Output Data.
+
+3.	Redistribution
+i.	Condition of Redistribution
+Licensee may only reproduce or redistribute the Model or Derivative Models if Licensee complies with all the conditions set out in Article 2, as well as the followings:
+(a)	Licensee shall provide all third-party recipients of the Model or Model Derivatives with a copy of this Agreement;
+(b)	Licensee shall, in all copies of the Model or Derivative Models that Licensee distributes, retain the following attribution notice within a “LICENSE” text file distributed as a part of such copies: 
+“Sarashina is licensed under the Sarashina Model NonCommercial License Agreement, Copyright ©SB Intuitions Corp. All Rights Reserved.”;
+(c)	If Licensee distributes the Model or Derivative Models, Licensee shall also include “Sarashina" at the beginning of the name of any such Model or Derivative Models; 
+(d)	If Licensee uses the Model or Derivative Models as a component of the system, Licensee shall clearly indicate “Built with Sarashina” in relevant materials of the system such as documents, user interfaces, and/or websites.
+
+4.	Trademark
+Nothing in this Agreement grant the Licensee permission to use the trade names, trademarks, service marks, or product names owned by SB Intuitions. However, the use within customary scope or the necessity to implement the content of this Agreement, such as quoting the deliverables, describing the origin of the deliverables and reproducing the content of the LICENSE file, is permitted.
+
+5.	Termination and Changes of the License
+i.	Litigation
+If Licensee institutes a lawsuit (including a cross-claim or counterclaim in a lawsuit) or other legal proceeding against any party in connection with the Model or Derivative Models, this Agreement will terminate as of the date such lawsuit is filed.
+ii.	Changes to the License
+SB Intuitions may revise this Agreement at any time, for security and/or safety reasons, to adapt to new technologies, to comply with legal and regulatory requirements, or for any other reasons. Upon the revision, SB Intuitions will replace this Agreement on the posted sites.
+iii.	Breach of the License
+SB Intuitions may terminate this Agreement if Licensee is in breach of any term or condition of this Agreement. Upon termination of this Agreement, Licensee shall delete and cease use of the Model and any Derivative Model. 
+iv.	Separability
+If any part or provision of this Agreement is held invalid, illegal or unenforceable, the validity, legality, and enforceability of the remaining provisions shall not in any way be affected or impaired thereby.
+
+6.	Prohibited activities
+
+i.	iProhibited Activities Policy
+Licensee shall not engage in any of the prohibited activities set forth in the “Sarashina Prohibited Activities Policy” (hereinafter referred to as the “Policy”), which is defined in paragraph iv of this Article. The Policy shall constitute a part of this Agreement.
+ii.	Mandatory Inheritance of Policy
+When Licensee redistributes or shares the Model or Derivative Models with a third party, Licensee shall include effective provisions to mandatorily inherit all restrictions regarding the prohibited activities set forth in this Article to the recipient, in the redistributed or shared Model, and any Derivative Models derived therefrom.
+iii.	Restriction on Model Improvement
+Licensee shall not use the Model, Derivative Models, or their Output Data to improve other machine learning models (excluding the Sarashina series), except with permission from SB Intuitions or when used for the improvement of Derivative Models of the Sarashina series.
+iv.	Contents of Prohibited Activities
+i. Using the Model, Derivative Models, or their Output Data to improve other machine learning models (excluding the Sarashina series), except with permission from SB Intuitions or when used for the improvement of Derivative Models of the Sarashina series.
+ii. Violating applicable national, local, international laws, regulations, administrative guidelines, or public order and morality.
+iii. Infringing Intellectual Property Rights such as copyrights, patent rights, trademark rights, privacy rights, portrait rights, or other third-party rights, or sharing personal information without consent.
+iv. Harming, exploiting, or attempting to harm individuals or groups, or activities related to serious human rights violations such as human trafficking and forced labor.
+v. Generating or distributing child sexual abuse content (CSAM), or impersonating/grooming children or minors for pedophilic exploitation purposes.
+vi. Generating or distributing information containing extreme gore (extreme depictions of cruelty such as bloodshed, human or animal body mutilation, corpses, or torture).
+vii. Defaming, disparaging, harassing, libelous, or otherwise annoying individuals or organizations.
+viii. Promoting or instructing suicide, self-harm, eating disorders, or encouraging/directing harm to others.
+ix. Supporting organizations or individuals involved in terrorism or hatred (hate), or activities that constitute discriminatory expressions or hate speech based on race, sexual orientation, etc.
+x. Activities that contribute to the development or manufacture of illegal or regulated weapons, or generating or distributing information containing expressions that promote the inappropriate use of drugs.
+xi. Using Output Data for the purpose of disseminating false information, using Output Data while concealing that it was generated by the Model or Derivative Models, deception through deepfakes or similar means, or acts that distort judgment capabilities through subliminal or manipulative/deceptive techniques.
+xii. Impersonation (including unauthorized impersonation of individuals/organizations) or publicly announcing AI-generated Output Data as one's own unique creation.
+xiii. Entrusting all decision-making processes to the Model, Derivative Models, or Output Data, such as decisions regarding hiring, personnel evaluations, legal proceedings, or other decisions that may cause damage to an individual.
+xiv. Exploiting any characteristic of an individual belonging to a specific group based on age, social, physical, or mental condition to substantially distort the behavior of a person belonging to that group in a way that causes or is likely to cause physical or psychological harm to that person or others.
+xv. Generating or distributing content that interferes with electoral participation or democratic/judicial processes, or generating or distributing information for the purpose of being used in judicial, law enforcement, immigration, or asylum procedures, such as predicting that an individual will commit fraud or a crime (e.g., text profiling, uncovering causal relationships between claims in documents, indiscriminate and arbitrary targeted use).
+xvi. Exploiting vulnerabilities (age, disability, etc.), social scoring, creating face recognition DB without consent, inferring thoughts/beliefs through biometrics, or inferring/classifying personal emotions in the workplace or educational institutions.
+xvii. Using Output Data to give advice regarding legally required tasks such as medical, legal, or accounting without expert review.
+xviii. Creating malware, excessive load on the system, or activities that obstruct its operation, as well as intentional circumvention of product safety measures and restrictions (such as prompt injection).
+
+7.	DISCLAIMER
+v.	FUNCTIONALITY AND PERFORMANCE
+THE MODEL IS PROVIDED ON AN “AS IS” BASIS. SB INTUITIONS MAKES NO WARRANTY AS TO FUNCTIONALITY OR PERFORMANCE.
+vi.	SUITABILITY
+SB INTUITIONS MAKES NO WARRANTY, EXPRESSED OR IMPLIED, WITH RESPECT TO THE MODEL OR DERIVATIVE MODELS, AS TO ANY MATTER INCLUDING BUT NOT LIMITED TO, NON-INFRINGEMENT OF THIRD-PARTY INTELLECTUAL PROPERTY RIGHTS AND OTHER RIGHTS, MERCHANTABILITY, INTEGRITY, USABILITY, AND COMPATIBILITY FOR ANY PARTICULAR PURPOSE.
+vii.	APPROPRIATENESS OF USE OR REDISTRIBUTION
+THE APPROPRIATENESS OF USING OR REDISTRIBUTING THE MODEL OR DERIVATIVE MODELS SHALL BE DETERMINED BY THE LICENSEE WHO SHALL BEAR FULL RESPONSIBILITY FOR SUCH DETERMINATION AND ACTIONS.
+viii.	TECHNICAL SERVICES
+SB INTUITIONS HAS NO OBLIGATION TO PROVIDE LICENSEE WITH ANY TECHNICAL SERVICES WITH RESPECT TO THE MODEL OR ANY DERIVATIVE MODELS.
+
+8.	LIMITATION OF LIABILITY
+SB INTUITIONS (INCLUDING ITS AFFILIATES FOR THE PURPOSE OF THIS ARTICLE 8) SHALL NOT BE LIABLE UNDER ANY THEORY OF LIABILITY ARISING FROM THIS AGREEMENT, WHETHER IN AN ACTION BASED ON CONTRACT, TORT, NEGLIGENCE, PRODUCT LIABILITY OR OTHERWISE, EXCEPT IN CASES OF WILFUL MISCONDUCT OR GROSS NEGLIGNECE BY SB INTUITIONS, OR WHERE LIABILITY IS MANDATED BY LAW.
+
+9.	Compensation
+Licensee shall indemnify and hold SB Intuitions (including its Affiliate for the purpose of this Article 9) harmless from and against all claims, demands, damages, losses, liabilities and expenses including, without limitation, reasonable attorneys' fees and expenses which SB Intuitions may suffer or incur as a result or as a consequence of, arising out of or in connection with the use, duplication, modification, distribution, execution or display of the Model, Derivative Models or Output Data by Licensee.
+
+10.	Trade
+The Model, Derivative Models or the technology contained therein may be subject to export controls and sanctions laws and regulations of Japan and other jurisdictions (the “Export Controls”). Licensee shall comply with all applicable Export Controls. Licensee shall not access, use, download or send the Model or Derivative Models in any manner that would cause any party to violate any Export Controls.
+The Model, Derivative Models, or Output Data generated therefrom, are prohibited from being used in the member states of the European Union (EU) or brought into the EU territory, because the amount of computation (FLOPs) used to train the Model may exceed the threshold of the EU AI Act.
+
+11.	Elimination of Anti-Social Forces
+i.	Licensee represents and warrants that it is not a gang, a gang member, an individual that left a gang within the last five (5) years, a quasi-member of a gang, a gang affiliate, corporate racketeer, a blackmailer camouflaged as a social movement activist, crime groups specialized in intellectual crimes or any other persons or groups equivalent to these (collectively “Anti-Social Forces”) and that it does not fall under any of the following categories, presently and in the future:
+(a)	Licensee has relationships in which Anti-Social Forces are recognized to control the management;
+(b)	Licensee has relationships in which Anti-Social Forces are recognized to be substantially involved in the management;
+(c)	Licensee has relationships in which it is recognized to be engaged in unlawful use of Anti-Social Forces; 
+(d)	Licensee provides funds or benefits to Anti-Social Forces; or
+(e)	Licensee’s officers or persons substantially involved in its management have socially reprehensible relationships with Anti-Social Forces.
+ii.	Licensee shall not engage in any of the following actions either by themselves or through a third party:
+(a)	violent demands;
+(b)	unreasonable demands beyond legal liability;
+(c)	threatening actions or use of violence in connection with transactions;
+(d)	spreading rumors, damaging the reputation of the counterparty by using fraudulent means or force, or obstructing the service of the other Party; or
+(e)	any other actions equivalent to any of the preceding items.
+iii.	SB Intuitions shall be entitled to unilaterally terminate this Agreement without giving any notice to Licensee when it is found that Licensee falls under the definition of Licensee or any of the items set forth in paragraph i of this Article 11, or has committed an action that falls under any of the items in paragraph ii of this Article 11, or has made a false declaration with regard to the representation or definitive agreement stated in paragraph i of this Article 11, regardless of any breach attributable to SB Intuitions. SB Intuitions shall not be responsible for any damage caused by the termination in accordance with this paragraph and incurred by Licensee.
+
+12.	Governing Law and Jurisdiction
+i.	Governing Law
+This Agreement shall be governed by and construed in accordance with the laws of Japan.
+ii.	Jurisdiction
+ Any dispute arising from or in connection with this Agreement shall be subject to the exclusive jurisdiction of the Tokyo District Court in the first instance.
