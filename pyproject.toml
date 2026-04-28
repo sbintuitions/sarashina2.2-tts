@@ -3,7 +3,7 @@ name = "sarashina2.2-tts"
 version = "0.1.0"
 description = "sarashina2.2-tts"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 license = {file = "LICENSE"}
 authors = [
     {name = "Lianbo Liu", email = "lianbo.liu@sbintuitions.co.jp"}
