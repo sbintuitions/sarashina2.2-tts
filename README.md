@@ -23,6 +23,8 @@ This model was trained on audio data collected from legitimately purchased audio
 
 ## Quick Start
 
+> 📖 Before using the model, please read the [Prompting Guide](#prompting-guide) to learn how to choose a good audio prompt - it has a significant impact on output quality.
+
 ### Local Installation
 
 1. Clone this repo
@@ -126,6 +128,29 @@ generator.save_audios(wavs, output_dir="./output")
 The generated audio will be saved in `./output` directory.
 
 The generated audio contains an inaudible watermark powered by [SilentCipher](https://github.com/sony/silentcipher), which allows the audio to be identified as AI-generated. Please do not remove or disable the watermark when using this model.
+
+## Prompting Guide
+
+sarashina2.2-tts is a research-oriented foundation model. It was trained on a large volume of speech data spanning diverse styles and quality levels, without filtering for specific use cases. This means the model has learned a wide range of speaking patterns - but it also means that **the quality and characteristics of the audio prompt directly determine the quality of the generated speech**. A well-chosen prompt is the key to getting the best results.
+
+### 1. Audio Quality
+The audio quality of the prompt is carried over to the generated speech. If you want clean, high-quality output, use a prompt with clear audio — minimal background noise, no clipping, and consistent volume.
+
+### 2. Speaking Style
+The model transfers the speaking style of the prompt to the generated speech. This includes intonation, pauses, rhythm, and tone. Choose a prompt whose style matches your desired output.
+
+### 3. Prompt Duration
+A prompt of around 3 seconds is generally sufficient for voice cloning (timbre transfer). However, for better style transfer - capturing intonation patterns, rhythm, and expressive characteristics, we recommend using a longer prompt of over 5 seconds or longer, which allows the model to extract richer style information.
+
+### 4. Punctuation in Text
+- **Always end with punctuation.** Both the prompt transcript and the target text should end with proper punctuation (e.g., `。`, `！`, `？`, `.`). Omitting sentence-ending punctuation may cause the generated speech to be cut off or incomplete.
+- **Punctuation controls pausing.** The pause patterns associated with punctuation marks (e.g., commas, periods) in the prompt transcript will be reflected in the generated speech. If you want fewer pauses, reduce unnecessary punctuation in your prompt transcript accordingly.
+
+### 5. Transcript Accuracy
+The prompt transcript should accurately match the actual spoken content in the audio. Mismatches between the audio and its transcript can degrade generation quality.
+
+### 6. Text Segmentation for Long Inputs
+For long input texts, the Gradio demo automatically splits text at punctuation boundaries. However, automatic segmentation may sometimes break sentences at suboptimal positions, which can affect naturalness. For the highest quality, consider splitting your text manually or writing custom segmentation rules tailored to your use case.
 
 ## Acknowledgments
 This model is built upon or incorporates code and models from the following open-source projects:

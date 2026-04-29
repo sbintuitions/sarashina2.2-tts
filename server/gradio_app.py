@@ -99,7 +99,8 @@ def build_ui() -> gr.Blocks:
             "2. Input the transcription of the prompt audio in the \"Prompt Text\" box.\n"
             "3. Enter your text to synthesize.\n"
             "4. Adjust the generation parameters as needed.\n"
-            "5. Click \"Synthesize\" to generate audio."
+            "5. Click \"Synthesize\" to generate audio.\n\n"
+            "📖 For best results, please read the [Prompting Guide](https://github.com/sbintuitions/sarashina2.2-tts#prompting-guide) before getting started."
         )
 
         # --- 1. Prompt selection ---
