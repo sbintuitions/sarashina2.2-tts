@@ -13,6 +13,7 @@ __pycache__/
 
 # Virtual environment
 venv/
+venv312/
 
 # Distribution / packaging
 .Python
@@ -46,6 +47,7 @@ pip-delete-this-directory.txt
 checkpoints/
 .gradio
 gradio_outputs/
+pretrained_models/
 
 # Ignore MacOS system files
 .DS_Store
