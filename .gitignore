@@ -45,6 +45,7 @@ pip-delete-this-directory.txt
 
 checkpoints/
 .gradio
+gradio_outputs/
 
 # Ignore MacOS system files
 .DS_Store
