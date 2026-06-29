@@ -8,6 +8,11 @@
 
 > 🎧 Listen to our audio samples [here](https://huggingface.co/sbintuitions/sarashina2.2-tts#audio-samples).
 
+## News
+
+- **2026/06/29** - 📄 Our [Technical Report](https://arxiv.org/abs/2606.25369) is released together with the [Joyo Kanji Yomi Benchmark](https://huggingface.co/datasets/sbintuitions/joyo-kanji-yomi-benchmark).
+- **2026/04/28** - 🎉🎉🎉 We released the [Sarashina2.2-TTS](https://huggingface.co/sbintuitions/sarashina2.2-tts) model weights.
+
 ## Highlights
 
 - 🇯🇵 **Japanese-Centric**: Designed and optimized specifically for Japanese, with broad coverage of real-world use cases.

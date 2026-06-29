@@ -8,6 +8,11 @@
 
 > 🎧 デモ音声は[こちら](https://huggingface.co/sbintuitions/sarashina2.2-tts#audio-samples)から試聴できます。
 
+## ニュース
+
+- **2026/06/29** - 📄 [技術レポート](https://arxiv.org/abs/2606.25369)および[常用漢字読みベンチマーク (Joyo Kanji Yomi Benchmark)](https://huggingface.co/datasets/sbintuitions/joyo-kanji-yomi-benchmark)を公開しました。
+- **2026/04/28** - 🎉🎉🎉 [Sarashina2.2-TTS](https://huggingface.co/sbintuitions/sarashina2.2-tts)を公開しました。
+
 ## 特長
 
 - 🇯🇵 **日本語中心**: 日本語に特化して設計・最適化されており、幅広い実用シーンに対応します。
