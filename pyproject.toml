@@ -12,10 +12,11 @@ dependencies = [
     # Core dependencies
     "torch<=2.9",
     "torchaudio<=2.9",
-    "transformers",
+    "transformers==4.57.6",
     "huggingface_hub",
     "numpy<=2.3.5",
     "tqdm",
+    "sentencepiece",
     # Audio processing
     "soundfile",
     "librosa>=0.11.0",
