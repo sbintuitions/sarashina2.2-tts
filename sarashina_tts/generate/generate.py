@@ -123,13 +123,17 @@ class HuggingFaceGenerator(BaseTextGenerator):
         ).to(self.device)
         
         # Convert vLLM-style parameters to HF parameters
+        do_sample = bool(gen_kwargs.get('do_sample', True))
         hf_kwargs = {
             'max_length': inputs.input_ids.shape[1] + gen_kwargs.get('max_tokens', 2048),
-            'do_sample': True,
-            'temperature': gen_kwargs.get('temperature', 0.9),
-            'top_p': gen_kwargs.get('top_p', 0.95),
-            'repetition_penalty': 1.0,
+            'do_sample': do_sample,
+            'repetition_penalty': float(gen_kwargs.get('repetition_penalty', 1.0)),
         }
+        if do_sample:
+            # temperature/top_p are only meaningful when sampling; passing them
+            # with do_sample=False triggers transformers warnings.
+            hf_kwargs['temperature'] = gen_kwargs.get('temperature', 0.9)
+            hf_kwargs['top_p'] = gen_kwargs.get('top_p', 0.95)
         
         with torch.no_grad():
             outputs = self.model.generate(
@@ -199,7 +203,8 @@ class VLLMGenerator(BaseTextGenerator):
         if self._vllm_model is None:
             raise RuntimeError("vLLM model not initialized")
         
-        # Convert to vLLM parameters
+        # Convert to vLLM parameters. vLLM has no do_sample flag: greedy decoding
+        # is expressed as temperature=0.
         vllm_kwargs = {
             'max_tokens': gen_kwargs.get('max_tokens', 2048),
             'temperature': gen_kwargs.get('temperature', 0.9),
@@ -207,6 +212,8 @@ class VLLMGenerator(BaseTextGenerator):
             'top_k': gen_kwargs.get('top_k', 50),
             'repetition_penalty': gen_kwargs.get('repetition_penalty', 1.0),
         }
+        if not gen_kwargs.get('do_sample', True):
+            vllm_kwargs['temperature'] = 0.0
         
         sampling_params = SamplingParams(**vllm_kwargs)
         outputs = self._vllm_model.generate(prompts, sampling_params)
