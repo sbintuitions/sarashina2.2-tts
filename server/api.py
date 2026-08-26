@@ -49,6 +49,13 @@ DEFAULT_PROMPT_TEXT = (
 _cache: Dict[str, Tuple[Any, Any, Any]] = {}
 _cache_lock = threading.Lock()
 
+# The generator (GPU inference, prompt embedding extraction and the SilentCipher
+# watermarker) is not thread-safe, so synthesis requests are serialised with this
+# lock. The handler itself is a plain `def` so FastAPI runs it in the threadpool
+# and the event loop stays free for /healthz and other requests while a
+# synthesis is in flight.
+_generate_lock = threading.Lock()
+
 
 def _hash_key(audio_bytes: bytes, prompt_text: str) -> str:
     m = hashlib.md5()
@@ -166,7 +173,7 @@ def healthz():
 
 
 @app.post("/synthesize")
-async def synthesize(
+def synthesize(
     prompt_file: Optional[UploadFile] = File(
         None, description="Prompt audio file (optional)."
     ),
@@ -210,7 +217,7 @@ async def synthesize(
             if not prompt_text:
                 prompt_text = DEFAULT_PROMPT_TEXT
         else:
-            audio_bytes = await prompt_file.read()
+            audio_bytes = prompt_file.file.read()
             if not audio_bytes:
                 raise HTTPException(status_code=400, detail="Empty prompt_file.")
 
@@ -229,10 +236,6 @@ async def synthesize(
         if not (0.0 <= top_p <= 1.0):
             raise HTTPException(status_code=422, detail="top_p must be in [0.0, 1.0].")
 
-        # Cache key and prepare embedding
-        key = _hash_key(audio_bytes, prompt_text)
-        flow_emb, tokens, feat = _prepare_embeddings(prompt_path, key)
-
         gen_kwargs = {
             "max_length": int(max_length),
             "repetition_penalty": float(repetition_penalty),
@@ -241,17 +244,24 @@ async def synthesize(
             "top_p": float(top_p),
         }
 
-        # Generate
-        wavs = gen.generate(
-            texts=[text_to_synth],
-            flow_embedding=flow_emb,
-            audio_prompt_path=prompt_path,
-            audio_prompt_text=prompt_text,
-            audio_prompt_tokens=tokens,
-            audio_prompt_feat=feat,
-            flow_embedding_only=flow_embedding_only,
-            gen_kwargs=gen_kwargs,
-        )
+        # Embedding extraction and generation share the GPU and mutate generator
+        # state; run them one request at a time.
+        with _generate_lock:
+            # Cache key and prepare embedding
+            key = _hash_key(audio_bytes, prompt_text)
+            flow_emb, tokens, feat = _prepare_embeddings(prompt_path, key)
+
+            # Generate
+            wavs = gen.generate(
+                texts=[text_to_synth],
+                flow_embedding=flow_emb,
+                audio_prompt_path=prompt_path,
+                audio_prompt_text=prompt_text,
+                audio_prompt_tokens=tokens,
+                audio_prompt_feat=feat,
+                flow_embedding_only=flow_embedding_only,
+                gen_kwargs=gen_kwargs,
+            )
 
         # Get Tensor and sample rate -> convert to WAV bytes
         audio, sr = _extract_audio_and_sr(wavs)
