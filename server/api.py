@@ -11,7 +11,7 @@ from typing import Optional, Tuple, Dict, Any
 import torch  # noqa: F401
 import torchaudio  # noqa: F401
 from fastapi import FastAPI, File, Form, UploadFile, HTTPException
-from fastapi.responses import StreamingResponse
+from fastapi.responses import Response
 
 from sarashina_tts.generate.generate import SarashinaTTSGenerator
 
@@ -257,10 +257,14 @@ async def synthesize(
         audio, sr = _extract_audio_and_sr(wavs)
         wav_bytes = _to_wav_bytes(audio, sr)
 
-        # Direct streaming return, no disk write, no JSON return
+        # Return the whole WAV in one response body, no disk write, no JSON return.
+        # Note: StreamingResponse(io.BytesIO(...)) must not be used here. Starlette
+        # iterates a file-like object line by line (split on 0x0A), so PCM16 audio
+        # is emitted as tens of thousands of tiny chunks and a ~9 MB response takes
+        # several seconds to send even though generation is already finished.
         filename = "tts_generated.wav"
-        return StreamingResponse(
-            io.BytesIO(wav_bytes),
+        return Response(
+            content=wav_bytes,
             media_type="audio/wav",
             headers={
                 "Content-Disposition": f'attachment; filename="{filename}"'
