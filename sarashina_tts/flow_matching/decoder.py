@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import logging
+import math
 from typing import Optional, Union
 
 import numpy as np
@@ -49,7 +50,10 @@ def _pad_mel_to_bucket(mel: torch.Tensor) -> torch.Tensor:
     T = mel.shape[-1]
     target = ((T + _HIFT_BUCKET_INTERVAL - 1) // _HIFT_BUCKET_INTERVAL) * _HIFT_BUCKET_INTERVAL
     if target > T:
-        mel = F.pad(mel, (0, target - T), value=0.0)
+        # Pad with log-mel silence (log(1e-5), the floor used in extract_mel_spectrogram).
+        # 0.0 is a loud flat spectrum in log-mel; after a silent tail, the jump leaks a
+        # 6 kHz tone into the last ~50 ms of the output.
+        mel = F.pad(mel, (0, target - T), value=math.log(1e-5))
     return mel
 
 
